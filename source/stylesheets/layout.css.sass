@@ -1,0 +1,122 @@
+*
+  outline: none
+
+header
+  background: url(../images/header-background.jpg) center fixed
+  text-align: center
+  padding: 80px 0
+  +cover
+  h2
+    color: white
+    padding: 40px 0 60px 0
+  a
+    background: white
+    display: inline-block
+    color: black
+    font:
+      family: 'Montserrat', sans-serif
+      size: 24px
+    text-transform: uppercase
+    padding: 10px 40px
+    &:hover
+      color: white
+      background: #f7941e
+
+article
+  +outer-container
+
+.orange
+  background: #f7941e
+  text-align: center
+  color: white
+  padding: 40px 0
+
+.info
+  padding: 100px 0
+  text-align: center
+  dl
+    margin: 50px 0 0 0
+    padding: 0
+    +outer-container
+    dd
+      +span-columns(6)
+      text-align: left
+      +media($tablet)
+        +span-columns(12)
+      h4
+        color: #f7941e
+        margin-bottom: 10px
+  a
+    color: #f7941e
+    &:hover
+      color: black
+
+.callout
+  border-top: 1px solid #b5b5b5
+  border-bottom: 1px solid #b5b5b5
+  padding: 40px 0
+  margin-top: 40px
+
+.sponsors
+  background: #dfdfdf
+  h4
+    color: #f7941e
+    padding-top: 60px
+    text-align: center
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    text-align: center
+    li
+      display: inline-block
+      vertical-align: middle
+      padding: 0 40px
+  dl
+    margin: 50px 0 60px 0
+    padding: 0
+    +outer-container
+    dd
+      +span-columns(6)
+      text-align: center
+      +media($tablet)
+        +span-columns(12)
+  a
+    color: white
+    display: block
+    text-align: center
+    background: #f7941e
+    padding: 15px 30px
+    box-sizing: border-box
+    font-size: 18px
+    span
+      display: block
+      font:
+        family: 'Montserrat', sans-serif
+        size: 24px
+      text-transform: uppercase
+    &:hover
+      background: black
+
+.meme-info
+  h4
+    color: #f7941e
+  dl
+    margin: 50px 0 0 0
+    padding: 0
+    +outer-container
+    dd
+      +span-columns(8)
+      +media($tablet)
+        +span-columns(12)
+      &:nth-of-type(2)
+        +span-columns(4)
+        +media($tablet)
+          +span-columns(12)
+
+.hamster-gif
+  background: url(../images/hamster.gif) repeat-x
+  display: block
+  width: 100%
+  height: 90px
+  margin: 80px 0
