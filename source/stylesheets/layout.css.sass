@@ -1,6 +1,50 @@
 *
   outline: none
 
+@import url(http://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Condensed)
+
+h1, h2, h3, h4, h5
+  margin: 0
+  padding: 0
+
+h2
+  font:
+    size: 48px
+  text-transform: uppercase
+  +media($tablet)
+    font:
+      size: 30px
+
+h3
+  font:
+    size: 45px
+    weight: 400
+  +media($tablet)
+    font:
+      size: 26px
+    margin-bottom: 15px
+
+h4
+  font:
+    size: 24px
+    family: 'Montserrat', sans-serif
+  text-transform: uppercase
+  +media($tablet)
+    font:
+      size: 18px
+
+h5
+  font:
+    size: 24px
+    weight: 400
+  +media($tablet)
+    font:
+      size: 16px
+
+br
+  +media($tablet)
+    display: none
+
 header
   background: url(../images/header-background.jpg) center fixed
   text-align: center
@@ -11,6 +55,8 @@ header
   h2
     color: white
     padding: 40px 0 60px 0
+    +media($tablet)
+      padding: 30px 0
   a
     background: white
     display: inline-block
@@ -34,18 +80,30 @@ article
   text-align: center
   color: white
   padding: 40px 0
+  +media($tablet)
+    padding: 20px 0
 
 .info
   padding: 100px 0
   text-align: center
+  +media($tablet)
+    padding: 30px 0
   dl
     margin: 50px 0 0 0
     padding: 0
     dd
-      +span-columns(6)
       text-align: left
+      padding-right: 60px
+      box-sizing: border-box
+      +span-columns(8)
       +media($tablet)
+        padding-right: 0px
         +span-columns(12)
+      &:nth-of-type(2)
+        +span-columns(4)
+        +media($tablet)
+          padding-right: 0px
+          +span-columns(12)
       h4
         color: #f7941e
         margin-bottom: 10px
@@ -107,16 +165,21 @@ article
 .meme-info
   h4
     color: #f7941e
+    margin-top: 30px
   dl
     margin: 50px 0 0 0
     padding: 0
     dd
+      padding-right: 60px
+      box-sizing: border-box
       +span-columns(8)
       +media($tablet)
+        padding-right: 0px
         +span-columns(12)
       &:nth-of-type(2)
         +span-columns(4)
         +media($tablet)
+          padding-right: 0px
           +span-columns(12)
 
 .hamster-gif
@@ -128,6 +191,7 @@ article
 
 .memes
   +outer-container
+  padding-bottom: 60px
   li.block
     margin-top: 20px
     +span-columns(3)
