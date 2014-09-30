@@ -1,7 +1,7 @@
 *
   outline: none
 
-// @import url(http://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Condensed)
+@import url(http://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Condensed)
 
 h1, h2, h3, h4, h5
   margin: 0
@@ -11,7 +11,7 @@ h2
   font:
     size: 48px
   text-transform: uppercase
-  // +media($tablet)
+  +media($medium-screen)
     font:
       size: 30px
 
@@ -19,7 +19,7 @@ h3
   font:
     size: 45px
     weight: 400
-  // +media($tablet)
+  +media($medium-screen)
     font:
       size: 26px
     margin-bottom: 15px
@@ -29,7 +29,7 @@ h4
     size: 24px
     family: 'Montserrat', sans-serif
   text-transform: uppercase
-  // +media($tablet)
+  +media($medium-screen)
     font:
       size: 18px
 
@@ -37,25 +37,25 @@ h5
   font:
     size: 24px
     weight: 400
-  // +media($tablet)
+  +media($medium-screen)
     font:
       size: 16px
 
 br
-  // +media($tablet)
+  +media($medium-screen)
     display: none
 
 header
   background: url(../images/header-background.jpg) center fixed
   text-align: center
   padding: 80px 0
-  // +media($tablet)
+  +media($medium-screen)
     padding: 30px
-  // +cover
+  +cover
   h2
     color: white
     padding: 40px 0 60px 0
-    // +media($tablet)
+    +media($medium-screen)
       padding: 30px 0
   a
     background: white
@@ -71,8 +71,8 @@ header
       background: #f7941e
 
 article
-  // +outer-container
-  // +media($tablet)
+  +outer-container
+  +media($medium-screen)
     padding: 0 30px
 
 .orange
@@ -80,13 +80,13 @@ article
   text-align: center
   color: white
   padding: 40px 0
-  // +media($tablet)
+  +media($medium-screen)
     padding: 20px 0
 
 .info
   padding: 100px 0
   text-align: center
-  // +media($tablet)
+  +media($medium-screen)
     padding: 30px 0
   dl
     margin: 50px 0 0 0
@@ -95,15 +95,15 @@ article
       text-align: left
       padding-right: 60px
       box-sizing: border-box
-      // +span-columns(8)
-      // +media($tablet)
+      +span-columns(8)
+      +media($medium-screen)
         padding-right: 0px
-        // +span-columns(12)
+        +span-columns(12)
       &:nth-of-type(2)
-        // +span-columns(4)
-        // +media($tablet)
+        +span-columns(4)
+        +media($medium-screen)
           padding-right: 0px
-          // +span-columns(12)
+          +span-columns(12)
       h4
         color: #f7941e
         margin-bottom: 10px
@@ -133,17 +133,17 @@ article
       display: inline-block
       vertical-align: middle
       padding: 0 40px
-      // +media($tablet)
+      +media($medium-screen)
         width: 100%
         margin: 20px 0
   dl
     padding: 0
     dd
       margin-bottom: 60px
-      // +span-columns(6)
+      +span-columns(6)
       text-align: center
-      // +media($tablet)
-        // +span-columns(12)
+      +media($medium-screen)
+        +span-columns(12)
         margin-bottom: 30px
   a
     color: white
@@ -172,15 +172,15 @@ article
     dd
       padding-right: 60px
       box-sizing: border-box
-      // +span-columns(8)
-      // +media($tablet)
+      +span-columns(8)
+      +media($medium-screen)
         padding-right: 0px
-        // +span-columns(12)
+        +span-columns(12)
       &:nth-of-type(2)
-        // +span-columns(4)
-        // +media($tablet)
+        +span-columns(4)
+        +media($medium-screen)
           padding-right: 0px
-          // +span-columns(12)
+          +span-columns(12)
 
 .hamster-gif
   background: url(../images/hamster.gif) repeat-x
@@ -190,14 +190,14 @@ article
   margin: 80px 0
 
 .memes
-  // +outer-container
+  +outer-container
   padding-bottom: 60px
   li.block
     margin-top: 20px
-    // +span-columns(3)
-    // +omega(4n)
-    // +media($tablet)
-      // +span-columns(12)
+    +span-columns(3)
+    +omega(4n)
+    +media($medium-screen)
+      +span-columns(12)
       text-align: center
     p
       text-transform: uppercase
@@ -207,12 +207,12 @@ a.ermahgerd
   background-size: contain
   min-height: 220px
   display: block
-  // +single-transition
+  +single-transition
   &:hover
     background: url(../images/ermah2.png) no-repeat
     background-size: contain
     min-height: 220px
-  // +media($tablet)
+  +media($medium-screen)
     min-height: 370px
     &:hover
       min-height: 370px
@@ -222,12 +222,12 @@ a.grumpy-cat
   background-size: contain
   min-height: 220px
   display: block
-  // +single-transition
+  +single-transition
   &:hover
     background: url(../images/grumpy2.png) no-repeat
     background-size: contain
     min-height: 220px
-  // +media($tablet)
+  +media($medium-screen)
     min-height: 370px
     &:hover
       min-height: 370px
@@ -237,12 +237,12 @@ a.dodson
   background-size: contain
   min-height: 220px
   display: block
-  // +single-transition
+  +single-transition
   &:hover
     background: url(../images/hide2.png) no-repeat
     background-size: contain
     min-height: 220px
-  // +media($tablet)
+  +media($medium-screen)
     min-height: 370px
     &:hover
       min-height: 370px
@@ -252,12 +252,12 @@ a.nyan-cat
   background-size: contain
   min-height: 220px
   display: block
-  // +single-transition
+  +single-transition
   &:hover
     background: url(../images/nyan2.png) no-repeat
     background-size: contain
     min-height: 220px
-  // +media($tablet)
+  +media($medium-screen)
     min-height: 370px
     &:hover
       min-height: 370px
@@ -267,12 +267,12 @@ a.laughing-salad
   background-size: contain
   min-height: 220px
   display: block
-  // +single-transition
+  +single-transition
   &:hover
     background: url(../images/salad2.png) no-repeat
     background-size: contain
     min-height: 220px
-  // +media($tablet)
+  +media($medium-screen)
     min-height: 370px
     &:hover
       min-height: 370px
@@ -282,12 +282,12 @@ a.double-rainbow
   background-size: contain
   min-height: 220px
   display: block
-  // +single-transition
+  +single-transition
   &:hover
     background: url(../images/rainbow2.png) no-repeat
     background-size: contain
     min-height: 220px
-  // +media($tablet)
+  +media($medium-screen)
     min-height: 370px
     &:hover
       min-height: 370px
@@ -297,12 +297,12 @@ a.gangnam-style
   background-size: contain
   min-height: 220px
   display: block
-  // +single-transition
+  +single-transition
   &:hover
     background: url(../images/gang2.png) no-repeat
     background-size: contain
     min-height: 220px
-  // +media($tablet)
+  +media($medium-screen)
     min-height: 370px
     &:hover
       min-height: 370px
@@ -312,12 +312,12 @@ a.scumbag-steve
   background-size: contain
   min-height: 220px
   display: block
-  // +single-transition
+  +single-transition
   &:hover
     background: url(../images/scum2.png) no-repeat
     background-size: contain
     min-height: 220px
-  // +media($tablet)
+  +media($medium-screen)
     min-height: 370px
     &:hover
       min-height: 370px
