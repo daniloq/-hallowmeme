@@ -1,8 +1,8 @@
 %header
   %article
-    %img{src: "images/hallowmeme.png"}
-    %h2 Costume Party
-    %a{href: "#"} Meme?
+    %img.wow.fadeInDown{src: "images/hallowmeme.png"}
+    %h2.wow.fadeInLeft{"data-wow-delay" => "1s"} Costume Party
+    %a.wow.fadeInRight{href: "#memes", "data-wow-delay" => "2s"} Meme?
 
 %section.orange
   %article
@@ -10,9 +10,9 @@
 
 %section.info
   %article
-    %h3 Hallowmeme is an offiline celebration of all things online.
-    %h5 (All like the most "cool stuff" in Jacksonville, we stole the idea from Brooklyn.)
-    .callout
+    %h3.wow.fadeInDown{"data-wow-delay" => "3s"} Hallowmeme is an offiline celebration of all things online.
+    %h5.wow.fadeInDown{"data-wow-delay" => "3s"} (All like the most "cool stuff" in Jacksonville, we stole the idea from Brooklyn.)
+    .callout.wow.fadeInDown{"data-wow-delay" => "3s"}
       %h5
         Join us for an evening of dancing, drinking and memeory making.
         %br
@@ -20,7 +20,7 @@
         %br
         complete with expert panel of internet trolls.
     %dl
-      %dd
+      %dd.wow.fadeInLeft
         %h4 Entry
         %p
           If you’re lucky enough to work for one of the companies below, your boss has paid for you to party. So thank the coworker who begged him or her to cough up the dough. If your workplace logo is not listed, we’re sorry that your boss is a dick/is poor/hates fun.
@@ -34,7 +34,7 @@
           %br
           %strong Questions?
           Re-read this website or bother someone else.
-      %dd
+      %dd.wow.fadeInRight
         %h4 Costumes
         %p
           %strong Costumes are required
@@ -52,7 +52,7 @@
   %article
     %h4 Generous Bar Tab Provided By
     .callout
-      %ul
+      %ul.wow.fadeInUp
         %li
           %img{src: "images/kyn.png"}
         %li
@@ -82,10 +82,10 @@
       %dd
         %h4 Examples
         %p Viral videos, Image Macros, Tenso, Rick Rolling, Disaster Girl, Insanity Wolf, Bad Luck Brian, the Ice Bucket Challenge...
-  .hamster-gif
-  %article
+  .hamster-gif.wow.bounceIn
+  %article#memes
     %h3 Meme Gallery
-    %ul.memes
+    %ul.memes.wow.fadeInUp
       %li.block
         %a.ermahgerd{href: "http://knowyourmeme.com/memes/ermahgerd", target: "_blank"}
         %p Ermahgerd
@@ -110,3 +110,22 @@
       %li.block
         %a.scumbag-steve{href: "http://knowyourmeme.com/memes/scumbag-steve", target: "_blank"}
         %p Scumbag Steve
+
+:javascript
+  // WOW Initializer
+  new WOW().init();
+  // Scroll To
+  $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
