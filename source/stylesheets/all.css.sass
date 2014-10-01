@@ -46,6 +46,17 @@ h5
     font:
       size: 16px
 
+h6
+  font:
+    size: 24px
+    family: "Montserrat", sans-serif
+  text-transform: uppercase
+  margin: 0
+  padding: 0
+  +media($awesome)
+    font:
+      size: 16px
+
 br
   +media($awesome)
     display: none
@@ -79,6 +90,33 @@ article
   +outer-container
   +media($awesome)
     padding: 0 30px
+  &.peps
+    padding: 0 80px 80px 80px
+    +media($awesome)
+      padding: 0 30px
+    h4, dt
+      text-align: left
+      margin: 0
+      padding: 0
+    h4
+      margin-bottom: 20px
+    dl
+      margin: 0
+      padding: 0
+      +span-columns(4)
+      dd
+        margin: 0 0 15px 0
+        padding: 0
+        width: 100%
+        float: none
+        text-align: left
+        font-size: 20px
+        +media($awesome)
+          font-size: 16px
+          min-height: 120px
+        img
+          vertical-align: middle
+          margin-right: 20px
 
 .orange
   background: #f7941e
@@ -140,6 +178,9 @@ article
     color: #f7941e
     padding-top: 60px
     text-align: center
+  p
+    text-align: center
+    margin: 10px 0 40px 0
   ul
     margin: 0
     padding: 0
@@ -154,13 +195,12 @@ article
         margin: 20px 0
   dl
     padding: 0
+    +clearfix
     dd
-      margin-bottom: 60px
       +span-columns(6)
       text-align: center
       +media($awesome)
         +span-columns(12)
-        margin-bottom: 30px
   a
     color: white
     display: block
@@ -208,9 +248,9 @@ article
 .hamster-gif
   background: url(../images/hamster.gif) repeat-x
   display: block
-  width: 100%
+  width: 99%
   height: 90px
-  margin: 80px 0
+  margin: 40px 0
 
 .memes
   +outer-container
