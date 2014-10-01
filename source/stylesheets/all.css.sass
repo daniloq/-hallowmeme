@@ -65,14 +65,15 @@ header
     background: white
     display: inline-block
     color: black
+    text-decoration: underline
     font:
       family: 'Montserrat', sans-serif
       size: 24px
     text-transform: uppercase
-    padding: 10px 40px
+    padding: 3px 40px
     &:hover
-      color: white
-      background: #f7941e
+      color: black
+      background: url(../images/rainbow.gif)
 
 article
   +outer-container
@@ -90,6 +91,12 @@ article
 .info
   padding: 100px 0
   text-align: center
+  border-style: solid
+  border-width: 28px 0px 0px
+  -moz-border-image: url(../images/bloodani.gif) 28 0 0 repeat
+  -webkit-border-image: url(../images/bloodani.gif) 28 0 0 repeat
+  -o-border-image: url(../images/bloodani.gif) 28 0 0 repeat
+  border-image: url(../images/bloodani.gif) 28 0 0 repeat
   +media($awesome)
     padding: 30px 0
   dl
@@ -123,6 +130,9 @@ article
   margin: 40px 0
   span
     color: #f7941e
+    text-transform: uppercase
+    font-weight: 700
+    margin-left: -5px
 
 .sponsors
   background: #dfdfdf
@@ -166,9 +176,16 @@ article
         size: 24px
       text-transform: uppercase
     &:hover
-      background: black
+      color: black
+      background: url(../images/rainbow.gif)
 
 .meme-info
+  border-style: solid
+  border-width: 28px 0px 0px
+  -moz-border-image: url(../images/bloodani.gif) 28 0 0 repeat
+  -webkit-border-image: url(../images/bloodani.gif) 28 0 0 repeat
+  -o-border-image: url(../images/bloodani.gif) 28 0 0 repeat
+  border-image: url(../images/bloodani.gif) 28 0 0 repeat
   h4
     color: #f7941e
     margin-top: 30px
@@ -213,7 +230,6 @@ a.ermahgerd
   background-size: contain
   min-height: 220px
   display: block
-  +single-transition
   &:hover
     background: url(../images/ermah2.png) no-repeat
     background-size: contain
@@ -228,7 +244,6 @@ a.grumpy-cat
   background-size: contain
   min-height: 220px
   display: block
-  +single-transition
   &:hover
     background: url(../images/grumpy2.png) no-repeat
     background-size: contain
@@ -243,7 +258,6 @@ a.dodson
   background-size: contain
   min-height: 220px
   display: block
-  +single-transition
   &:hover
     background: url(../images/hide2.png) no-repeat
     background-size: contain
@@ -273,7 +287,6 @@ a.laughing-salad
   background-size: contain
   min-height: 220px
   display: block
-  +single-transition
   &:hover
     background: url(../images/salad2.png) no-repeat
     background-size: contain
@@ -303,7 +316,6 @@ a.gangnam-style
   background-size: contain
   min-height: 220px
   display: block
-  +single-transition
   &:hover
     background: url(../images/gang2.png) no-repeat
     background-size: contain
@@ -322,8 +334,27 @@ a.scumbag-steve
     background: url(../images/scum2.png) no-repeat
     background-size: contain
     min-height: 220px
-  +single-transition
   +media($awesome)
     min-height: 370px
     &:hover
       min-height: 370px
+
+marquee
+  span
+    color: black
+
+.zombie
+  display: block
+  position: absolute
+  text-align: center
+  margin: -89px auto 0 auto
+  left: 0
+  right: 0
+
+.bloody
+  border-style: solid
+  border-width: 0px 0px 28px
+  -moz-border-image: url(../images/bloodani.gif) 0 0 28 repeat
+  -webkit-border-image: url(../images/bloodani.gif) 0 0 28 repeat
+  -o-border-image: url(../images/bloodani.gif) 0 0 28 repeat
+  border-image: url(../images/bloodani.gif) 0 0 28 repeat
