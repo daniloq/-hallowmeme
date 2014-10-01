@@ -76,7 +76,6 @@ header
     background: white
     display: inline-block
     color: black
-    text-decoration: underline
     font:
       family: 'Montserrat', sans-serif
       size: 24px
@@ -259,6 +258,7 @@ article
   padding-bottom: 60px
   li.block
     margin-top: 20px
+    text-align: center
     +span-columns(3)
     +omega(4n)
     +media($awesome)
@@ -268,12 +268,12 @@ article
       text-transform: uppercase
 
 a.ermahgerd
-  background: url(../images/ermah.png) no-repeat
+  background: url(../images/ermah.png) no-repeat center
   background-size: contain
   min-height: 220px
   display: block
   &:hover
-    background: url(../images/ermah2.png) no-repeat
+    background: url(../images/ermah2.png) no-repeat center
     background-size: contain
     min-height: 220px
   +media($awesome)
@@ -282,12 +282,12 @@ a.ermahgerd
       min-height: 370px
 
 a.grumpy-cat
-  background: url(../images/grumpy.png) no-repeat
+  background: url(../images/grumpy.png) no-repeat center
   background-size: contain
   min-height: 220px
   display: block
   &:hover
-    background: url(../images/grumpy2.png) no-repeat
+    background: url(../images/grumpy2.png) no-repeat center
     background-size: contain
     min-height: 220px
   +media($awesome)
@@ -296,12 +296,12 @@ a.grumpy-cat
       min-height: 370px
 
 a.dodson
-  background: url(../images/hide.png) no-repeat
+  background: url(../images/hide.png) no-repeat center
   background-size: contain
   min-height: 220px
   display: block
   &:hover
-    background: url(../images/hide2.png) no-repeat
+    background: url(../images/hide2.png) no-repeat center
     background-size: contain
     min-height: 220px
   +media($awesome)
@@ -310,13 +310,13 @@ a.dodson
       min-height: 370px
 
 a.nyan-cat
-  background: url(../images/nyan.png) no-repeat
+  background: url(../images/nyan.png) no-repeat center
   background-size: contain
   min-height: 220px
   display: block
   +single-transition
   &:hover
-    background: url(../images/nyan2.png) no-repeat
+    background: url(../images/nyan2.png) no-repeat center
     background-size: contain
     min-height: 220px
   +media($awesome)
@@ -325,12 +325,12 @@ a.nyan-cat
       min-height: 370px
 
 a.laughing-salad
-  background: url(../images/salad.png) no-repeat
+  background: url(../images/salad.png) no-repeat center
   background-size: contain
   min-height: 220px
   display: block
   &:hover
-    background: url(../images/salad2.png) no-repeat
+    background: url(../images/salad2.png) no-repeat center
     background-size: contain
     min-height: 220px
   +media($awesome)
@@ -339,13 +339,13 @@ a.laughing-salad
       min-height: 370px
 
 a.double-rainbow
-  background: url(../images/rainbow.png) no-repeat
+  background: url(../images/rainbow.png) no-repeat center
   background-size: contain
   min-height: 220px
   display: block
   +single-transition
   &:hover
-    background: url(../images/rainbow2.png) no-repeat
+    background: url(../images/rainbow2.png) no-repeat center
     background-size: contain
     min-height: 220px
   +media($awesome)
@@ -354,12 +354,12 @@ a.double-rainbow
       min-height: 370px
 
 a.gangnam-style
-  background: url(../images/gang.png) no-repeat
+  background: url(../images/gang.png) no-repeat center
   background-size: contain
   min-height: 220px
   display: block
   &:hover
-    background: url(../images/gang2.png) no-repeat
+    background: url(../images/gang2.png) no-repeat center
     background-size: contain
     min-height: 220px
   +media($awesome)
@@ -368,12 +368,12 @@ a.gangnam-style
       min-height: 370px
 
 a.scumbag-steve
-  background: url(../images/scum.png) no-repeat
+  background: url(../images/scum.png) no-repeat center
   background-size: contain
   min-height: 220px
   display: block
   &:hover
-    background: url(../images/scum2.png) no-repeat
+    background: url(../images/scum2.png) no-repeat center
     background-size: contain
     min-height: 220px
   +media($awesome)
@@ -392,6 +392,10 @@ marquee
   margin: -89px auto 0 auto
   left: 0
   right: 0
+  +media($awesome)
+    margin: -30px auto 0 auto
+    img
+      height: 80px
 
 .bloody
   border-style: solid
