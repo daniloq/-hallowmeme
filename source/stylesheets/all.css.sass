@@ -135,6 +135,7 @@ article
   -webkit-border-image: url(../images/bloodani.gif) 28 0 0 repeat
   -o-border-image: url(../images/bloodani.gif) 28 0 0 repeat
   border-image: url(../images/bloodani.gif) 28 0 0 repeat
+  background: white
   +media($awesome)
     padding: 30px 0
   dl
@@ -222,6 +223,7 @@ article
 
 .meme-info
   border-style: solid
+  background: white
   border-width: 28px 0px 0px
   -moz-border-image: url(../images/bloodani.gif) 28 0 0 repeat
   -webkit-border-image: url(../images/bloodani.gif) 28 0 0 repeat
@@ -407,3 +409,33 @@ marquee
   -webkit-border-image: url(../images/bloodani.gif) 0 0 28 repeat
   -o-border-image: url(../images/bloodani.gif) 0 0 28 repeat
   border-image: url(../images/bloodani.gif) 0 0 28 repeat
+
+.memeweenies
+  background: black
+  color: white
+  dl
+    dd
+      +span-columns(6)
+  ul
+    margin: 30px 0 0 0
+    padding: 0
+    list-style: none
+    li
+      display: inline-block
+      vertical-align: middle
+      &:nth-of-type(2)
+        margin-left: 30px
+
+.logos
+  border-top: 1px solid #717171
+  padding-top: 30px
+  margin-top: 30px
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    text-align: center
+    li
+      display: inline-block
+      vertical-align: middle
+      padding: 0 30px

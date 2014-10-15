@@ -1,0 +1,40 @@
+%section.memeweenies
+  %article
+    %dl
+      %dd
+        = image_tag "Memeween_GramFeed.png"
+        %ul
+          %li
+            = image_tag "http://placehold.it/150x150"
+          %li
+            .meta PHOTO TAKEN BY
+            .username
+              @KATYGARRISON
+            .time
+              5 MINUTES AGO
+      %dd
+        #instafeed
+
+%section.logos
+  %ul
+    %li
+      = image_tag "sportsyapper-logo.png"
+    %li
+      = image_tag "onespark-logo.png"
+    %li
+      = image_tag "stationfour-logo.png"
+    %li
+      = image_tag "ignite-logo.png"
+
+
+:javascript
+  var feed = new Instafeed({
+    get: 'tagged',
+    tagName: 'awesome',
+    clientId: '9065490b350f49f4be204361078ee40a',
+    sortBy: 'most-recent',
+    limit: '1',
+    resolution: 'standard_resolution',
+    template: '<a href="{{link}}"><img src="{{image}}" /></a>'
+  });
+  feed.run();
