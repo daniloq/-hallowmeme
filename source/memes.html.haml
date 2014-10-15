@@ -1,40 +1,52 @@
-%section.memeweenies
-  %article
-    %dl
-      %dd
-        = image_tag "Memeween_GramFeed.png"
-        %ul
-          %li
-            = image_tag "http://placehold.it/150x150"
-          %li
-            .meta PHOTO TAKEN BY
-            .username
-              @KATYGARRISON
-            .time
-              5 MINUTES AGO
-      %dd
-        #instafeed
-
-%section.logos
-  %ul
-    %li
-      = image_tag "sportsyapper-logo.png"
-    %li
-      = image_tag "onespark-logo.png"
-    %li
-      = image_tag "stationfour-logo.png"
-    %li
-      = image_tag "ignite-logo.png"
-
+#instafeed.animated.fadeIn
 
 :javascript
   var feed = new Instafeed({
     get: 'tagged',
-    tagName: 'awesome',
+    tagName: 'memeween',
     clientId: '9065490b350f49f4be204361078ee40a',
     sortBy: 'most-recent',
     limit: '1',
     resolution: 'standard_resolution',
-    template: '<a href="{{link}}"><img src="{{image}}" /></a>'
+    template: '<section class="memeweenies"> <article> <dl> <dd> <img src="/images/Memeween_GramFeed.png"> <ul> <li> <img src="{{model.user.profile_picture}}"> </li> <li> <div class="meta"> PHOTO TAKEN BY </div> <div class="username"> {{model.user.username}} </div> <div class="time"> {{model.created_time}} </div> </li> </ul> </dd> <dd> <div class="insta"><a href="{{link}}"><img src="{{image}}" /></a></div> </dd> </dl> </article> </section> <section class="logos"> <ul> <li> <img src="/images/sportsyapper-logo.png"> </li> <li> <img src="/images/onespark-logo.png"> </li> <li> <img src="/images/stationfour-logo.png"> </li> <li> <img src="/images/ignite-logo.png"> </li> </ul> </section>',
+    filter: function(image) {
+  		var date = new Date(image.created_time*1000);
+  		m = date.getMonth();
+  		d = date.getDate();
+  		y = date.getFullYear();
+  		var month_names = new Array ( );
+  		month_names[month_names.length] = "Jan";
+  		month_names[month_names.length] = "Feb";
+  		month_names[month_names.length] = "Mar";
+  		month_names[month_names.length] = "Apr";
+  		month_names[month_names.length] = "May";
+  		month_names[month_names.length] = "Jun";
+  		month_names[month_names.length] = "Jul";
+  		month_names[month_names.length] = "Aug";
+  		month_names[month_names.length] = "Sep";
+  		month_names[month_names.length] = "Oct";
+  		month_names[month_names.length] = "Nov";
+  		month_names[month_names.length] = "Dec";
+
+  		var thetime = month_names[m] + ' ' + d + ' ' + y;
+
+  		image.created_time = thetime;
+
+  		return true;
+  	}
   });
   feed.run();
+
+:javascript
+  function swap_content(){
+      $('#instafeed').removeClass('animated fadeIn');
+      $('#instafeed').addClass('animated fadeOut');
+      setTimeout(function(){
+        $('#instafeed').empty();
+        feed.next();
+        $('#instafeed').removeClass('animated fadeOut');
+        $('#instafeed').addClass('animated fadeIn');
+      },300);
+  }
+
+  setInterval(swap_content, 9000);
